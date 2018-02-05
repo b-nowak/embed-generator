@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Lato:300');
+$mainGreen: #18BC31;
+$mainBrightBlue: #38ADEB;
+$mainYellow: #FFCA00;
+$contentPadding: 65px 0 65px 67px;
+$contentPaddingMobile: 65px 0;
+$mainFont: 'Lato',
+sans-serif;
+$secondaryFont: 'Indie Flower',
+cursive;
+html,
+body {
+  height: 100%;
+  width: 100%; //font-family: 'open-sans';
+  font-family: $mainFont; // overflow: hidden;
+}
+
+@import "views/_dashboard";
+@import "views/builder/_embed-builder";
+@import "views/builder/_map-builder";
+@import "views/builder/_place-builder";
+@import "views/gallery/_map-gallery";
+@import "views/gallery/_place-embed-gallery";
+@import "views/_success-page";
+@import "globals/_elements";
+@import "globals/_colorpicker";
+.p0 {
+  padding: 0;
+}

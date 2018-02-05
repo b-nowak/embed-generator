@@ -1,0 +1,214 @@
+    body,
+    html {
+        font-size: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .places-gallery-wrap {
+        background: url(../images/builder_background.jpg);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        .switches-wrap {
+            width: 100%;
+            padding: 10px 10px 10px 85px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .single-switch {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin-right: 15px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                span {
+                    color: white;
+                    font-size: 13px;
+                    /* line-height: 0; */
+                    height: 100%;
+                    display: block;
+                    padding: 0;
+                    margin: 0;
+                }
+                .switch {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    
+    .masonry-wrap {
+        padding: 0 15px;
+        overflow-y: auto;
+        height: 100%;
+        * {
+            box-sizing: border-box;
+        }
+        .grid {
+            margin: 0 auto;
+        }
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+    
+    .grid-item {
+        width: 250px;
+        height: auto;
+        margin-bottom: 15px;
+        float: left;
+        // przyklad ze zdjeciami zamiast embedow, do wywalenia 
+        .embed {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        // koniec przykladu
+        .embed-container {
+            position: relative;
+            width: 100%;
+            outline: 1px solid rgba(255, 255, 255, 0.37);
+            .embed-snapshot {
+                position: relative;
+                width: 100%;
+                .embed-item {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+                .overlay {
+                    position: absolute;
+                    bottom: 100%;
+                    left: 0;
+                    right: 0;
+                    padding: 0 10px;
+                    background: rgba(41, 68, 93, 1);
+                    background: -moz-linear-gradient(top, rgba(41, 68, 93, 1) 0%, rgba(47, 43, 61, 0.93) 100%);
+                    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41, 68, 93, 1)), color-stop(100%, rgba(47, 43, 61, 0.93)));
+                    background: -webkit-linear-gradient(top, rgba(41, 68, 93, 1) 0%, rgba(47, 43, 61, 0.93) 100%);
+                    background: -o-linear-gradient(top, rgba(41, 68, 93, 1) 0%, rgba(47, 43, 61, 0.93) 100%);
+                    background: -ms-linear-gradient(top, rgba(41, 68, 93, 1) 0%, rgba(47, 43, 61, 0.93) 100%);
+                    background: linear-gradient(to bottom, rgba(41, 68, 93, 1) 0%, rgba(47, 43, 61, 0.93) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29445d', endColorstr='#2f2b3d', GradientType=0);
+                    overflow: hidden;
+                    width: 100%;
+                    height: 0;
+                    transition: .3s ease;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: stretch;
+                    opacity: 0;
+                    .information {
+                        color: white;
+                        width: 100%;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        flex-direction: column;
+                        h4 {
+                            font-size: 14px;
+                            margin-bottom: 2px;
+                        }
+                        span {
+                            font-size: 11px;
+                        }
+                    }
+                    .buttons {
+                        color: white;
+                        width: 100%;
+                        flex: 2;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        .btn-transparent {
+                            cursor: pointer;
+                            background: url(../images/icons/eye-17.svg) 50% 0% no-repeat;
+                            display: block;
+                            padding: 30px 10px 5px;
+                            background-size: 30px;
+                            color: white;
+                            font-size: 12px;
+                            margin-bottom: 0px;
+                            transition: .2s;
+                            &.embed {
+                                background: url(../images/icons/code-3px.svg) 50% 0% no-repeat;
+                                background-size: 30px;
+                            }
+                            &.design {
+                                background: url(../images/icons/measure-big.svg) 50% 0% no-repeat;
+                                background-size: 25px;
+                            }
+                            &.delete {
+                                background: url(../images/icons/trash.svg) 50% 0% no-repeat;
+                                background-size: 25px;
+                            }
+                            &:hover,
+                            &:focus {
+                                text-decoration: none;
+                                margin-bottom: 5px;
+                                border-bottom: 1px solid $mainYellow;
+                            }
+                        }
+                    }
+                }
+                &:hover .overlay {
+                    bottom: 0;
+                    height: 100%;
+                    opacity: 1;
+                }
+            }
+            .embed-caption {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #333;
+                text-align: left;
+                margin: 0;
+                padding: 14px 10px;
+                position: relative;
+                background: #fff;
+                h3 {
+                    margin: 0;
+                    a {
+                        font-size: 12px;
+                        font-weight: 700;
+                        display: block;
+                        color: #000;
+                        transition: .2s all;
+                        @media (min-width: 992px) and (max-width: 1200px) {
+                            font-size: 15px;
+                        }
+                        @media (max-width: 480px) {
+                            font-size: 13px;
+                        }
+                        &:hover {
+                            text-decoration: none;
+                            color: $mainYellow;
+                        }
+                    }
+                }
+                span {
+                    font-size: 9px;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+    
+    .grid-item--height2 {
+        height: 200px;
+    }
+    
+    .grid-item--height3 {
+        height: 260px;
+    }

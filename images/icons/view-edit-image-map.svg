@@ -1,0 +1,12 @@
+<svg width="48" height="48" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="nc-icon outline">
+    <g>
+        <title>Layer 1</title>
+        <g id="svg_1">
+            <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="m4,24c0,0 7.9,-14 20,-14c12,0 20,14 20,14s-8.1,14 -20,14c-12,0 -20,-14 -20,-14z" id="svg_2"/>
+            <circle fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="24" cy="24" r="7" id="svg_3"/>
+        </g>
+        <g id="svg_4" stroke="null">
+            <polygon fill="none" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points="9.90243911743164,39.219512939453125 6,40 6.780488014221191,36.09756088256836 18.878047943115234,23.999998092651367 22.000001907348633,27.121952056884766 " id="svg_7" stroke="#fff"/>
+        </g>
+    </g>
+</svg>

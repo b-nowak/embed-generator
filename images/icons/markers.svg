@@ -1,0 +1,10 @@
+<svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px"
+     height="48px" viewBox="0 0 48 48">
+    <g>
+        <path data-cap="butt" data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" d="M24.285,4.286
+	C26.417,2.812,29.699,2,32,2c6.765,0,14,5.141,14,14c0,8.641-14,22-14,22"></path>
+        <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M34,19c0,9.875-16,26-16,26
+	S2,28.875,2,19C2,8.875,10.268,3,18,3S34,8.875,34,19z"></path>
+        <circle fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="18" cy="19" r="5"></circle>
+    </g>
+</svg>

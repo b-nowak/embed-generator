@@ -1,0 +1,14 @@
+<svg viewBox="0 0 59 48" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="nc-icon outline">
+    <g>
+        <title>Layer 1</title>
+        <g id="svg_1">
+            <line id="svg_2" y2="40" x2="18" y1="4" x1="18" stroke-miterlimit="10" stroke-width="2" stroke="#ffffff" fill="none"/>
+            <line id="svg_3" y2="44" x2="30" y1="8" x1="30" stroke-miterlimit="10" stroke-width="2" stroke="#ffffff" fill="none"/>
+            <polygon id="svg_4" points="2,8 18,4 30,8  46,4 46,40 30,44 18,40 2,44 " stroke-miterlimit="10" stroke-linecap="square" stroke-width="2" stroke="#ffffff" fill="none"/>
+        </g>
+        <g id="svg_5" stroke="null">
+            <path id="svg_6" d="m36,24.65c0,0 4.1475,-7.35 10.5,-7.35c6.3,0 10.5,7.35 10.5,7.35s-4.2525,7.35 -10.5,7.35c-6.3,0 -10.5,-7.35 -10.5,-7.35z" stroke-miterlimit="10" stroke-linecap="square" stroke-width="2" fill="none" stroke="#ffffff"/>
+            <circle id="svg_7" r="3.675" cy="24.65" cx="46.5" stroke-miterlimit="10" stroke-linecap="square" stroke-width="2" fill="none" stroke="#ffffff"/>
+        </g>
+    </g>
+</svg>

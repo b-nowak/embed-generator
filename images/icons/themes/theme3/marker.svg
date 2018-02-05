@@ -1,0 +1,9 @@
+<svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64">
+<g transform="translate(0, 0)">
+<polyline data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="
+	14,46 4,62 60,62 50,46 " stroke-linejoin="miter"></polyline>
+<path fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10" d="M52,21.163
+	C52,32.946,32,54,32,54S12,32.946,12,21.163C12,9.082,22.335,2.072,32,2.072S52,9.082,52,21.163z" stroke-linejoin="miter"></path>
+<circle fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10" cx="32" cy="22.072" r="6" stroke-linejoin="miter"></circle>
+</g>
+</svg>

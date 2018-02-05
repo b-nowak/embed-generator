@@ -1,0 +1,51 @@
+body {
+    background: url(https://www.toptal.com/designers/subtlepatterns/patterns/cardboard_flat.png);
+}
+
+.place-builder-wrap {
+    height: 100%;
+    .bottom-navigation-tabs {
+        .tab-content {
+            position: relative;
+            padding-bottom: 0;
+            .btnNext {
+                padding: 30px;
+                background: url(../images/icons/tail-triangle-right.svg) no-repeat;
+                background-size: 50px;
+                background-position: center;
+                width: 50px;
+                display: block;
+                position: absolute;
+                bottom: 10px;
+                right: 15px;
+                transition: .2s;
+                cursor: pointer;
+                &:hover,
+                &:focus {
+                    margin-bottom: 2px;
+                    border-bottom: 2px solid $mainYellow;
+                    cursor: pointer;
+                }
+            }
+            .btnPrevious {
+                padding: 30px;
+                background: url(../images/icons/tail-triangle-left.svg) no-repeat;
+                background-size: 50px;
+                background-position: center;
+                width: 50px;
+                display: block;
+                position: absolute;
+                bottom: 10px;
+                left: 85px;
+                transition: .2s;
+                cursor: pointer;
+                &:hover,
+                &:focus {
+                    margin-bottom: 2px;
+                    border-bottom: 2px solid $mainYellow;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

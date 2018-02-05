@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Pixdor</title>
+
+
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+
+    <link href="../../css/base.css" rel="stylesheet">
+
+    <!--<script src="../../js/modernizr.custom.js"></script>-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <h1 title="Pixdor">
+            <a href="/">
+                <img class="logo" src="../../images/logo.png" alt="">
+            </a>
+        </h1>
+        <h2>Add Place Marker</h2>
+        <div class="burger">
+            <div class="dropdown dropbtn dropdown-show" onclick="toggleDropdown();">
+                <a class="dropbtnclean main-menu-button">
+                    <img src='../../images/icons/menu-34-2.svg'>
+                </a>
+                <!--<div id="myDropdown" class="dropdown-content">
+    <a href="/logout">Logout <i class="fa fa-sign-out"></i></a>
+</div>-->
+            </div>
+        </div>
+    </header>
+    <div class="places-gallery-wrap inner-content-padding">
+        <div class="main-toolbar-bg"></div>
+        <!-- _______________MAIN TOOLBAR______________-->
+        <div class="main-toolbar" data-type="config-menu">
+            <ul class="main-toolbar-ul">
+                <li class="search-tool">
+                    <a type="button" data-toggle="toggle" data-target="#search-tool-menu" id="search-tool" class="tool">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" xml:space="preserve" width="64" height="64">
+                    <g class="nc-icon-wrapper" fill="#ffffff">
+                        <line data-cap="butt" data-color="color-2" fill="none" stroke="#ffffff" stroke-width="4"
+                              stroke-miterlimit="10" x1="60" y1="60"
+                              x2="43" y2="43" stroke-linejoin="miter" stroke-linecap="butt"></line>
+                        <circle fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="square"
+                                stroke-miterlimit="10" cx="26" cy="26" r="24"
+                                stroke-linejoin="miter"></circle>
+                    </g>
+                </svg>
+                        <span>Search</span>
+                    </a>
+                    <div id="search-tool-menu" class="tool-menu">
+                        <input type="text" id="search-field" name="" placeholder="Search titles, tags, text">
+                        <input type="text" id="search-field" name="" placeholder="Categories">
+                        <button class="btn btn-default" type="button">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="        http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16"
+                                 xml:space="preserve" width="16" height="16">
+                <g class="nc-icon-wrapper" fill="#ffffff">
+                    <circle fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-miterlimit="10" cx="6.5" cy="6.5" r="5.5" data-cap="butt"></circle>
+                    <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-miterlimit="10" x1="15" y1="15" x2="10.389" y2="10.389" data-cap="butt"></line>
+                </g>
+              </svg>
+                            Search
+                        </button>
+                    </div>
+                </li>
+                <li class="add-place-tool">
+                    <a type="button" class="tool">
+                        <img src='../../images/icons/pin-add1.svg'>
+                        <span>Add Place</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="switches-wrap">
+            <div class="single-switch">
+                <label class="switch">
+                 <input type="checkbox">
+                 <span class="slider round transparent"></span>
+            </label>
+                <span>Show details</span>
+            </div>
+            <div class="single-switch">
+                <label class="switch">
+                 <input type="checkbox">
+                 <span class="slider round transparent"></span>
+            </label>
+                <span>Show My Places</span>
+            </div>
+        </div>
+
+        <div class="masonry-wrap">
+            <!-- tu padding -->
+            <div class="grid">
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent">View</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent delete">Delete</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                    <a href="#" class="btn-transparent design">Design</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1920x1080" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/212x450" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/200x318" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1510x570" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1900x270" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/650x250" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent">View</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent delete">Delete</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                    <a href="#" class="btn-transparent design">Design</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1920x1080" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/212x450" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/200x318" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1510x570" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1900x270" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/650x250" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent">View</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent delete">Delete</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                    <a href="#" class="btn-transparent design">Design</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1920x1080" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/212x450" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/200x318" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1510x570" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1900x270" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/650x250" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent">View</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent delete">Delete</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                    <a href="#" class="btn-transparent design">Design</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1920x1080" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/212x450" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/200x318" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1510x570" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1900x270" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/650x250" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent">View</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent delete">Delete</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                    <a href="#" class="btn-transparent design">Design</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1920x1080" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/212x450" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/200x318" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1510x570" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1900x270" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/650x250" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent">View</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent delete">Delete</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                    <a href="#" class="btn-transparent design">Design</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1920x1080" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/212x450" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/200x318" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1510x570" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1900x270" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/650x250" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent">View</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent delete">Delete</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                    <a href="#" class="btn-transparent design">Design</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1920x1080" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/212x450" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/200x318" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1510x570" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1900x270" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/650x250" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent">View</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent delete">Delete</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                    <a href="#" class="btn-transparent design">Design</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1920x1080" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/212x450" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/200x318" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1510x570" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1900x270" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/650x250" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent">View</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed-container">
+                        <div class="embed-snapshot">
+                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                            <div class="overlay">
+                                <div class="information">
+                                    <h4>Created: 04/08/17</h4>
+                                    <span>User: PIXDOR</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn-transparent delete">Delete</a>
+                                    <a href="#" class="btn-transparent embed">Embed</a>
+                                    <a href="#" class="btn-transparent design">Design</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embed-caption">
+                            <h3>
+                                <a href="#">My theme or something</a>
+                            </h3>
+                            <span><strong>500x500</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1920x1080" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/212x450" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/200x318" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/982x831" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1510x570" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/1900x270" alt="">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="embed">
+                        <img src="http://placehold.it/650x250" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="../../js/jquery.wheelcolorpicker-3.0.2.min.js"></script>
+    <script src="../../js/masonry.pkgd.min.js"></script>
+    <!-- <script src="../../js/imagesloaded.js"></script>
+    <script src="../../js/classie.js"></script>
+    <script src="../../js/AnimOnScroll.js"></script>-->
+
+    <script>
+        $(document).ready(function() {
+            $('.tool').click(function() {
+                var selector = $(this).data("target");
+                $('.tool-menu').removeClass("in");
+                $(selector).addClass('in');
+            });
+            $('.grid').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: 250,
+                horizontalOrder: true,
+                gutter: 15,
+                isFitWidth: true
+            });
+        });
+
+    </script>
+
+
+    <!--
+    <script>
+        new AnimOnScroll(document.getElementById('grid'), {
+            minDuration: 0.4,
+            maxDuration: 0.7,
+            viewportFactor: 0.2
+        });
+
+    </script>
+-->
+</body>
+
+</html>

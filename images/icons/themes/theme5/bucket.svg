@@ -1,0 +1,9 @@
+<svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48"><g transform="translate(0, 0)">
+<path data-cap="butt" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" d="M4.8,24L26,39.6
+	c1.6,1.6,6.3-0.7,10.6-4.9s6.5-9,4.9-10.6L26,2.8" stroke-linejoin="miter" stroke-linecap="butt"></path>
+<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -4.9757 14.8409)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="15.4" cy="13.4" rx="15" ry="6" stroke-linejoin="miter"></ellipse>
+<path data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M2,40
+	c0-2.2,4-8,4-8s4,5.8,4,8s-1.8,4-4,4S2,42.2,2,40z" stroke-linejoin="miter"></path>
+<path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M24,22h8c4.4,0,8-3.6,8-8v0
+	c0-4.4-3.6-8-8-8h-3.6" stroke-linejoin="miter"></path>
+</g></svg>

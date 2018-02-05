@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Pixdor</title>
+
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/animate.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+    </head>
+
+    <body>
+        <header>
+            <h1 title="Pixdor">
+                <a href="/"></a>
+            </h1>
+            <h2>New Embed</h2>
+            <div class="burger">
+                <div class="dropdown dropbtn dropdown-show" onclick="toggleDropdown();">
+                    <a class="dropbtnclean main-menu-button">
+                        <img src='../../images/icons/menu-34-2.svg'>
+                    </a>
+                    <!--<div id="myDropdown" class="dropdown-content"> <a href="/logout">Logout <i class="fa fa-sign-out"></i></a> </div>-->
+                </div>
+            </div>
+        </header>
+
+        <div class="embed-builder-wrap inner-content-padding">
+            <div class="main-toolbar-bg"></div>
+
+            <div class="bottom-navigation-tabs">
+                <ul class="nav nav-pills nav-justified bottom-tab-list">
+                    <li id="design-tab" class="active">
+                        <a data-toggle="tab" href="#design" id="save-tab-btn">
+                            <img src='../../images/icons/measure-big.svg'>
+                            <span>Design</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#preview">
+                            <img src='../../images/icons/eye-17.svg'>
+                            <span class="preview-caption">Preview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#save">
+                            <img src='../../images/icons/code.svg'>
+                            <span>Save/Embed</span>
+                        </a>
+                    </li>
+                    <li id="themes-tab" style="display: none;">
+                        <a data-toggle="tab" href="#themes" id="themes-tab-btn">
+                            <img src='../../images/icons/code.svg'>
+                            <span>Save/Embed</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="design" class="tab-pane fade in active">
+                        <!-- _______________MAIN TOOLBAR______________-->
+                        <div class="main-toolbar" data-type="config-menu">
+                            <ul class="main-toolbar-ul">
+                                <!-- <li class="search-tool"> <a type="button" data-toggle="toggle" data-target="#search-tool-menu" id="search-tool" class="tool"> <img src='../../images/icons/zoom-2.svg'> <span>Search</span> </a> </li> -->
+
+                                <li class="carousel-tool">
+                                    <a type="button" data-toggle="toggle" data-target="#carousel-tool-menu" id="carousel-tool" class="tool">
+
+                                        <img src='../../images/icons/slider.svg'>
+                                        <span>Carousel</span>
+                                    </a>
+                                    <div id="carousel-tool-menu" class="tool-menu">
+                                        <ul class="tool-menu-elements">
+                                            <li>
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span>Carousel on/off</span>
+                                            </li>
+                                            <li>
+                                                <img src='../../images/icons/time-countdown.svg'>
+                                                <span>2s</span>
+                                                <img src='../../images/icons/triangle-down-20.svg'>
+                                            </li>
+                                            <li>
+                                                <img src='../../images/icons/time-countdown.svg'>
+                                                <span>Fade</span>
+                                                <img src='../../images/icons/triangle-down-20.svg'>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="gallery-tool">
+                                    <a type="button" data-toggle="toggle" data-target="#gallery-tool-menu" id="gallery-tool" class="tool">
+                                        <img src='../../images/icons/image-add.svg'>
+                                        <span>Gallery</span>
+                                    </a>
+                                    <div id="gallery-tool-menu" class="tool-menu">
+                                        <ul class="tool-menu-elements">
+                                            <li>
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span>Gallery on/off</span>
+                                            </li>
+                                            <li>
+                                                <span>Gallery style 1</span>
+                                                <img src='../../images/icons/triangle-down-20.svg'>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="size-tool">
+                                    <a type="button" data-toggle="toggle" data-target="#size-tool-menu" id="size-tool" class="tool">
+                                        <img src='../../images/icons/3d-29.svg'>
+                                        <span>Size</span>
+                                    </a>
+                                    <div id="size-tool-menu" class="tool-menu">
+                                        <ul class="tool-menu-elements">
+                                            <li>
+                                                <span>Width</span>
+                                                <input type="text" id="search-field" name="" placeholder="500px">
+                                            </li>
+                                            <li>
+                                                <span>Height</span>
+                                                <input type="text" id="search-field" name="" placeholder="500px">
+                                            </li>
+                                            <li>
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span>Keep ratio</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="options-tool">
+                                    <a type="button" data-toggle="toggle" data-target="#options-tool-menu" id="options-tool" class="tool">
+                                        <img src='../../images/icons/preferences-rotate.svg'>
+                                        <span>Options</span>
+                                    </a>
+                                    <div id="options-tool-menu" class="tool-menu">
+                                        <ul class="tool-menu-elements">
+
+                                            <li>
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span>Hide/Show Layer Menu</span>
+                                            </li>
+                                            <li>
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span>Zoom/Pan controls</span>
+                                            </li>
+                                            <li>
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span>Fly Tour between Places</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="text-tool">
+                                    <a type="button" data-toggle="toggle" data-target="#text-tool-menu" id="text-tool" class="tool">
+                                        <img src='../../images/icons/text.svg'>
+                                        <span>Text</span>
+                                    </a>
+                                    <div id="text-tool-menu" class="tool-menu">
+                                        <ul class="tool-menu-elements">
+                                            <li>
+                                                <span>Add Text layer</span>
+
+                                                <img src='../../images/icons/circle-add.svg'>
+                                            </li>
+                                            <li>
+                                                <span>Font Family</span>
+                                                <select id="color-palette">
+                                                    <option>Arial</option>
+                                                    <option>Helvetica</option>
+                                                    <option>Times New Roman</option>
+                                                    <option>Lato</option>
+                                                    <option>Open Sans</option>
+                                                </select>
+                                            </li>
+
+                                            <li>
+                                                <span>Weight</span>
+                                                <select id="color-palette">
+                                                    <option>300</option>
+                                                    <option>500</option>
+                                                    <option>700</option>
+                                                </select>
+
+                                            </li>
+                                            <li>
+                                                <span>Size</span>
+                                                <input type="text" id="search-field" name="" placeholder="20px">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="tint-tool">
+                                    <a type="button" data-toggle="toggle" data-target="#tint-tool-menu" id="tint-tool" class="tool">
+                                        <img src='../../images/icons/paint-bucket-40.svg'>
+                                        <span>Tint</span>
+                                    </a>
+                                    <div id="tint-tool-menu" class="tool-menu">
+                                        <ul class="tool-menu-elements">
+                                            <li>
+                                                <span>Pick a color:</span>
+                                                <input type="text" data-wheelcolorpicker="" data-wcp-preview="true" id="color">
+                                            </li>
+                                            <li>
+
+                                                <span>
+                                                    Predefined colors:</span>
+                                                <select id="color-palette">
+                                                    <option value="#fce94f" style="background: #fce94f;">Butter</option>
+                                                    <option value="#fcaf3e" style="background: #fcaf3e;">Orange</option>
+                                                    <option value="#e9b96e" style="background: #e9b96e;">Chocolate</option>
+                                                    <option value="#8ae234" style="background: #8ae234;">Chameleon</option>
+                                                    <option value="#729fcf" style="background: #729fcf;">Sky blue</option>
+                                                    <option value="#ad7fa8" style="background: #ad7fa8;">Plum</option>
+                                                    <option value="#ef2929" style="background: #ef2929;">Scarlet red</option>
+                                                </select>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                    <!-- initial pixdor -->
+                                    <!-- // -->
+                                </li>
+
+                                <li class="theme-tool">
+                                    <a type="button" data-toggle="tab" href="#themes" id="theme-tool" class="tool">
+                                        <img src='../../images/icons/paint-brush.svg'>
+                                        <span>Theme</span>
+                                    </a>
+                                </li>
+                                <!-- deleted commented code -->
+                                <li>
+                                    <a href="#" class="tool inactive">
+                                        <img src='../../images/icons/text.svg'>
+                                        <span>Inactive</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="tool">
+                                        <img src='../../images/icons/tap-02.svg'>
+                                        <span>Hover</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- / end of main toolbar -->
+
+                        <div class="embed-wrap">
+                            <div class="top-bar clearfix">
+                                <span class="title">Hotel Sobieski</span>
+                                <span class="dimensions">500x500px</span>
+                            </div>
+                            <div class="embed"></div>
+                        </div>
+
+                    </div>
+                    <!-- end of design tab -->
+                    <div id="preview" class="tab-pane fade">
+
+                        <!-- _______________MAIN TOOLBAR PREVIEW______________-->
+                        <div class="main-toolbar" data-type="config-menu">
+                            <ul class="main-toolbar-ul">
+                                <li class="back-tool">
+                                    <a type="button" id="back-tool" class="tool">
+                                        <img src='../../images/icons/undo-25.svg'>
+                                        <span>Back</span>
+                                    </a>
+                                </li>
+                                <li class="preview-tool">
+                                    <a type="button" data-toggle="toggle" data-target="#preview-tool-menu" id="preview-tool" class="tool regular">
+                                        <span></span>
+                                    </a>
+                                    <a type="button" data-toggle="toggle" data-target="#preview-tool-menu" id="preview-tool" class="tool white">
+                                        <span></span>
+                                    </a>
+                                    <a type="button" data-toggle="toggle" data-target="#preview-tool-menu" id="preview-tool" class="tool black">
+                                        <span></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- / end of main toolbar -->
+                        <div class="embed-wrap">
+                            <div class="top-bar clearfix">
+                                <span class="title">Hotel Sobieski</span>
+                                <span class="dimensions">500x500px</span>
+                            </div>
+                            <div class="embed"></div>
+                        </div>
+                    </div>
+
+                    <div id="save" class="tab-pane fade">
+                        <!-- _MAIN TOOLBAR_-->
+                        <div class="main-toolbar" data-type="config-menu">
+                            <ul class="main-toolbar-ul">
+                                <li class="back-tool">
+                                    <a type="button" id="back-tool" class="tool">
+                                        <img src='../../images/icons/undo-25.svg'>
+                                        <span>Back</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- / end of main toolbar -->
+                        <div class="save-wrap">
+                            <div class="save-button-content">
+                                <div class="caption-wrap">
+                                    <h3>Save?</h3>
+                                    <span id="save-closer"></span>
+                                </div>
+                                <div class="widget-name-wrap">
+                                    <input type="text" id="search-field" name="" placeholder="Embed name">
+                                    <i class="glyphicon glyphicon-pencil right"></i>
+                                </div>
+                                <div class="save-buttons">
+                                    <button class="btn btn-save">Save draft
+                                        <i class="glyphicon glyphicon-pencil left"></i>
+                                        <i class="glyphicon glyphicon-ok right"></i>
+                                    </button>
+                                    <button class="btn btn-default pull-right">Save as theme
+                                        <i class="glyphicon glyphicon-plus left"></i>
+                                        <i class="glyphicon glyphicon-ok right"></i>
+                                    </button>
+                                </div>
+                                <div class="embed-and-schedule">
+                                    <button class="btn btn-default w100">Embed & schedule
+                                        <i class="glyphicon glyphicon-calendar left"></i>
+                                    </button>
+                                </div>
+                                <div class="embed">
+                                    <button class="btn btn-embed w100">Embed now
+                                        <i class="glyphicon glyphicon-link left"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="themes" class="tab-pane fade">
+                        <div class="main-toolbar" data-type="config-menu">
+                            <ul class="main-toolbar-ul">
+                                <li class="back-tool">
+                                    <a type="button" id="back-tool" class="tool">
+                                        <img src='../../images/icons/undo-25.svg'>
+                                        <span>Back</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- MY THEMES -->
+                        <div class="themes-wrap ">
+                            <div class="my-themes-wrap ">
+                                <div class="col-lg-12 col-xs-12">
+                                    <h2>Your saved themes</h2>
+                                </div>
+
+                                <div class="masonry-wrap">
+                                    <div class="grid">
+
+                                        <div class="grid-item">
+                                            <div class="embed-container">
+                                                <div class="embed-snapshot">
+                                                    <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                                                    <div class="overlay">
+                                                        <div class="information">
+                                                            <h4>Created: 04/08/17</h4>
+                                                            <span>User: PIXDOR</span>
+                                                        </div>
+                                                        <div class="buttons">
+                                                            <a href="#" class="btn-transparent">View</a>
+                                                            <a href="#" class="btn-transparent embed">Embed</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="embed-caption">
+                                                    <h3>
+                                                        <a href="#">My theme or something</a>
+                                                    </h3>
+                                                    <span>
+                                                        <strong>500x500</strong>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed-container">
+                                                <div class="embed-snapshot">
+                                                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                                                    <div class="overlay">
+                                                        <div class="information">
+                                                            <h4>Created: 04/08/17</h4>
+                                                            <span>User: PIXDOR</span>
+                                                        </div>
+                                                        <div class="buttons">
+                                                            <a href="#" class="btn-transparent delete">Delete</a>
+                                                            <a href="#" class="btn-transparent embed">Embed</a>
+                                                            <a href="#" class="btn-transparent design">Design</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="embed-caption">
+                                                    <h3>
+                                                        <a href="#">My theme or something</a>
+                                                    </h3>
+                                                    <span>
+                                                        <strong>500x500</strong>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/1920x1080" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="grid-item">
+                                            <div class="embed-container">
+                                                <div class="embed-snapshot">
+                                                    <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                                                    <div class="overlay">
+                                                        <div class="information">
+                                                            <h4>Created: 04/08/17</h4>
+                                                            <span>User: PIXDOR</span>
+                                                        </div>
+                                                        <div class="buttons">
+                                                            <a href="#" class="btn-transparent">View</a>
+                                                            <a href="#" class="btn-transparent embed">Embed</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="embed-caption">
+                                                    <h3>
+                                                        <a href="#">My theme or something</a>
+                                                    </h3>
+                                                    <span>
+                                                        <strong>500x500</strong>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed-container">
+                                                <div class="embed-snapshot">
+                                                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                                                    <div class="overlay">
+                                                        <div class="information">
+                                                            <h4>Created: 04/08/17</h4>
+                                                            <span>User: PIXDOR</span>
+                                                        </div>
+                                                        <div class="buttons">
+                                                            <a href="#" class="btn-transparent delete">Delete</a>
+                                                            <a href="#" class="btn-transparent embed">Embed</a>
+                                                            <a href="#" class="btn-transparent design">Design</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="embed-caption">
+                                                    <h3>
+                                                        <a href="#">My theme or something</a>
+                                                    </h3>
+                                                    <span>
+                                                        <strong>500x500</strong>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/650x250" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed-container">
+                                                <div class="embed-snapshot">
+                                                    <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                                                    <div class="overlay">
+                                                        <div class="information">
+                                                            <h4>Created: 04/08/17</h4>
+                                                            <span>User: PIXDOR</span>
+                                                        </div>
+                                                        <div class="buttons">
+                                                            <a href="#" class="btn-transparent">View</a>
+                                                            <a href="#" class="btn-transparent embed">Embed</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="embed-caption">
+                                                    <h3>
+                                                        <a href="#">My theme or something</a>
+                                                    </h3>
+                                                    <span>
+                                                        <strong>500x500</strong>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed-container">
+                                                <div class="embed-snapshot">
+                                                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                                                    <div class="overlay">
+                                                        <div class="information">
+                                                            <h4>Created: 04/08/17</h4>
+                                                            <span>User: PIXDOR</span>
+                                                        </div>
+                                                        <div class="buttons">
+                                                            <a href="#" class="btn-transparent delete">Delete</a>
+                                                            <a href="#" class="btn-transparent embed">Embed</a>
+                                                            <a href="#" class="btn-transparent design">Design</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="embed-caption">
+                                                    <h3>
+                                                        <a href="#">My theme or something</a>
+                                                    </h3>
+                                                    <span>
+                                                        <strong>500x500</strong>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/1920x1080" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="grid-item">
+                                            <div class="embed-container">
+                                                <div class="embed-snapshot">
+                                                    <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                                                    <div class="overlay">
+                                                        <div class="information">
+                                                            <h4>Created: 04/08/17</h4>
+                                                            <span>User: PIXDOR</span>
+                                                        </div>
+                                                        <div class="buttons">
+                                                            <a href="#" class="btn-transparent">View</a>
+                                                            <a href="#" class="btn-transparent embed">Embed</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="embed-caption">
+                                                    <h3>
+                                                        <a href="#">My theme or something</a>
+                                                    </h3>
+                                                    <span>
+                                                        <strong>500x500</strong>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed-container">
+                                                <div class="embed-snapshot">
+                                                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                                                    <div class="overlay">
+                                                        <div class="information">
+                                                            <h4>Created: 04/08/17</h4>
+                                                            <span>User: PIXDOR</span>
+                                                        </div>
+                                                        <div class="buttons">
+                                                            <a href="#" class="btn-transparent delete">Delete</a>
+                                                            <a href="#" class="btn-transparent embed">Embed</a>
+                                                            <a href="#" class="btn-transparent design">Design</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="embed-caption">
+                                                    <h3>
+                                                        <a href="#">My theme or something</a>
+                                                    </h3>
+                                                    <span>
+                                                        <strong>500x500</strong>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/1920x1080" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/212x450" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/982x831" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/200x318" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/982x831" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/982x831" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/1510x570" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/1900x270" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/650x250" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed-container">
+                                                <div class="embed-snapshot">
+                                                    <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                                                    <div class="overlay">
+                                                        <div class="information">
+                                                            <h4>Created: 04/08/17</h4>
+                                                            <span>User: PIXDOR</span>
+                                                        </div>
+                                                        <div class="buttons">
+                                                            <a href="#" class="btn-transparent">View</a>
+                                                            <a href="#" class="btn-transparent embed">Embed</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="embed-caption">
+                                                    <h3>
+                                                        <a href="#">My theme or something</a>
+                                                    </h3>
+                                                    <span>
+                                                        <strong>500x500</strong>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed-container">
+                                                <div class="embed-snapshot">
+                                                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="embed-item">
+                                                    <div class="overlay">
+                                                        <div class="information">
+                                                            <h4>Created: 04/08/17</h4>
+                                                            <span>User: PIXDOR</span>
+                                                        </div>
+                                                        <div class="buttons">
+                                                            <a href="#" class="btn-transparent delete">Delete</a>
+                                                            <a href="#" class="btn-transparent embed">Embed</a>
+                                                            <a href="#" class="btn-transparent design">Design</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="embed-caption">
+                                                    <h3>
+                                                        <a href="#">My theme or something</a>
+                                                    </h3>
+                                                    <span>
+                                                        <strong>500x500</strong>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/1920x1080" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/212x450" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="grid-item">
+                                            <div class="embed">
+                                                <img src="http://placehold.it/982x831" alt="">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../js/jquery.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+        <script src="../../js/jquery.wheelcolorpicker-3.0.2.min.js"></script>
+        <script src="../../js/masonry.pkgd.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+
+                (function () {
+                    $('.hamburger-menu').on('click', function () {
+                        $('.bar').toggleClass('animate');
+                        $('.horizontal-actions').toggleClass('active');
+                        $('.theme-info').toggleClass('inactive');
+                    })
+                })();
+
+                // preview color changer
+                $('.tool.white').on('click', function () {
+                    $('.embed-builder-wrap').attr('style', 'background: #fff');
+                    $('.nav li.active').attr('style', 'background: #b5b5b5');
+                });
+                $('.tool.black').on('click', function () {
+                    $('.embed-builder-wrap').attr('style', 'background: #000');
+                    $('.nav li.active').removeAttr('style');
+                });
+                $('.tool.regular').on('click', function () {
+                    $('.embed-builder-wrap').removeAttr('style');
+                    $('.nav li.active').removeAttr('style');
+                });
+
+                // preview improvements for bottom navigation bar
+                $('.nav li').on('click', function () {
+                    $('.embed-builder-wrap').removeAttr('style');
+                    $('.nav li.active').removeAttr('style');
+                });
+
+                // main toolbar tool menu opener
+                $('.tool').click(function () {
+                    var selector = $(this).data("target");
+                    $('.tool-menu').removeClass("in");
+                    $(selector).addClass('in');
+                });
+
+                // inspirations menu dropdown
+                function toggleDropdown() {
+                    $('.dropdown-content').toggleClass('show')
+                }
+
+                // jquery UI draggable init
+                $(".embed-wrap").draggable({handle: ".top-bar", containment: ".tab-content", scroll: false});
+
+                $("#back-tool, #save-closer").click(function () {
+                    $("#save-tab-btn").trigger('click');
+                });
+
+                $("#theme-tool").click(function () {
+                    $("#themes-tab-btn").trigger('click');
+                    $("#design-tab a").addClass("factive");
+
+                });
+
+                $('.nav li').click(function () {
+                    $("#themes-tab").css("display", "none");
+                });
+
+                $('.nav li a').click(function () {
+                    $("#design-tab a").removeClass('factive');
+                });
+
+                //show theme content on theme picker tool
+                $('#target').on('click hover', function () {
+                    // Do something for both
+                });
+
+                // color-picker plugin
+                $(function () {
+                    $('#color-palette').on('change', function () {
+                        $('#color').wheelColorPicker('setValue', $(this).val());
+                    });
+                    $('#color-invert').on('click', function () {
+                        var color = $('#color').wheelColorPicker('getColor');
+                        color.r = 1 - color.r;
+                        color.g = 1 - color.g;
+                        color.b = 1 - color.b;
+                        $('#color').wheelColorPicker('setRgb', color.r, color.g, color.b);
+                    });
+                    $('#color-complement').on('click', function () {
+                        var color = $('#color').wheelColorPicker('getColor');
+                        color.h = (0.5 + color.h) % 1;
+                        $('#color').wheelColorPicker('setHsv', color.h, color.s, color.v);
+                    });
+                    $('#color-palette').on('change', function () {
+                        $('#color').wheelColorPicker('setValue', $(this).val());
+                    });
+                });
+
+                $('a[data-toggle=tab]').each(function () {
+                    var $this = $(this);
+
+                    $this.on('shown.bs.tab', function () {
+                        $('.grid').masonry({itemSelector: '.grid-item', columnWidth: 250, horizontalOrder: true, gutter: 15, isFitWidth: true});
+                    });
+                });
+
+            });
+        </script>
+
+    </body>
+
+</html>

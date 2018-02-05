@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64"><g  transform="translate(8, 8)">
+<polyline data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="&#10;&#9;10,34 4,46 44,46 38,34 "/>
+<path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M38,16&#10;&#9;c0,8.641-14,22.75-14,22.75S10,24.641,10,16c0-8.859,7.235-14,14-14S38,7.141,38,16z"/>
+<circle fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="24" cy="16" r="4"/>
+</g></svg>

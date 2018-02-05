@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Pixdor</title>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+
+    <link href="css/base.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="color-wrap dashboard">
+        <div class="gradient-wrap dashboard">
+        </div>
+    </div>
+    <header class="p0">
+        <h1 title="Pixdor">
+            <a href="/">
+                <img class="logo" src="images/logo.png" alt="">
+            </a>
+        </h1>
+        <h2>Add Place Marker</h2>
+        <div class="burger">
+            <div class="dropdown dropbtn dropdown-show" onclick="toggleDropdown();">
+                <a class="dropbtnclean main-menu-button">
+                    <img src='images/icons/menu-34-2.svg'>
+                </a>
+                <!--<div id="myDropdown" class="dropdown-content">
+    <a href="/logout">Logout <i class="fa fa-sign-out"></i></a>
+</div>-->
+            </div>
+        </div>
+    </header>
+    <div class="dashboard-wrap">
+        <div class="actions">
+            <h3>What would you like to create today?</h3>
+            <ul>
+                <li class="action inactive">
+                    <a href="#">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" xml:space="preserve" width="64" height="64">
+                            <g class="nc-icon-wrapper" fill="#ffffff">
+                                <line fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="30" y1="2" x2="30"
+                                    y2="62" stroke-linejoin="miter"></line>
+                                <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M43.996,12.68 C36.336,9.24,16,7.687,16,20c0,15.355,28,9.378,28,22.927S26.273,55.46,14,51.056"
+                                    stroke-linejoin="miter"></path>
+                            </g>
+                        </svg>
+                        <span>
+				Marketing</span>
+                    </a>
+                </li>
+                <li class="action">
+                    <a href="#" data-toggle="collapse" data-target="#places-menu">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" xml:space="preserve" width="64" height="64">
+                            <g class="nc-icon-wrapper" fill="#ffffff">
+                                <path data-cap="butt" data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" d="M30.854,5.202 C34.178,3.177,38.223,2,42,2c9.665,0,20,7.01,20,19.091C62,32.874,42,54,42,54s-2.617-2.706-6.244-7.202"
+                                    stroke-linejoin="miter" stroke-linecap="butt"></path>
+                                <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M46,26 c0,12.689-22,34-22,34S2,38.689,2,26C2,12.99,13.369,4,24,4S46,12.99,46,26z"
+                                    stroke-linejoin="miter"></path>
+                                <circle fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="24" cy="26" r="8"
+                                    stroke-linejoin="miter"></circle>
+                            </g>
+                        </svg>
+                        <span>Places</span>
+                    </a>
+                    <ul id="places-menu" class="collapse">
+                        <li class="action">
+                            <a href="{{ path('place_marker.new') }}">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" xml:space="preserve" width="64" height="64">
+                                    <g class="nc-icon-wrapper" fill="#ffffff">
+                                        <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M54,24.095 C54,39,32,61,32,61S10,39,10,24.095C10,10.113,21.369,2,32,2S54,10.113,54,24.095z"
+                                            stroke-linejoin="miter"></path>
+                                        <circle data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10"
+                                            cx="32" cy="24" r="8" stroke-linejoin="miter"></circle>
+                                    </g>
+                                </svg>
+                                <span>Place</span>
+                            </a>
+                        </li>
+
+                        <li class="action">
+                            <a href="{{ path('map.new') }}">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" stroke-width="2">
+                                    <g stroke-width="2" transform="translate(0, 0)">
+                                        <polyline fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="40,11.5 46,10 46,40 30,44 18,40 2,44 2,14 8,12.5 "
+                                            stroke-linejoin="miter"></polyline>
+                                        <path data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M34,12 c0,6.172-10,16.25-10,16.25S14,18.172,14,12c0-6.328,5.168-10,10-10S34,5.672,34,12z"
+                                            stroke-linejoin="miter"></path>
+                                        <circle data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10"
+                                            cx="24" cy="12" r="3" stroke-linejoin="miter"></circle>
+                                    </g>
+                                </svg>
+                                <span>Maps</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="action inactive">
+                    <a href="#">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" xml:space="preserve" width="64" height="64">
+                            <g class="nc-icon-wrapper" fill="#ffffff">
+                                <circle data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10"
+                                    cx="46" cy="28" r="6" stroke-linejoin="miter"></circle>
+                                <circle data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10"
+                                    cx="14" cy="28" r="4" stroke-linejoin="miter"></circle>
+                                <circle data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10"
+                                    cx="18" cy="42" r="4" stroke-linejoin="miter"></circle>
+                                <circle data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10"
+                                    cx="32" cy="48" r="4" stroke-linejoin="miter"></circle>
+                                <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M2,30.1 C2,19.9,7.1,10.9,14.8,5.4c2.8-1.9,7.3-2.4,9.1,0c2.6,3.4-2.1,8.2,0,11c5.4,6.6,16.8-6.4,30.2,0c9.6,4.8,8.2,17.4,7.1,21.9 C57.6,51,46,60.2,32.2,60.2C15.5,60.2,2,46.7,2,30.1z"
+                                    stroke-linejoin="miter"></path>
+                            </g>
+                        </svg>
+                        <span>Graphics</span>
+                    </a>
+                </li>
+                <li class="action inactive">
+                    <a href="#">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" xml:space="preserve" width="64" height="64">
+                            <g class="nc-icon-wrapper" fill="#ffffff">
+                                <line data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="54"
+                                    y1="28" x2="62" y2="28" stroke-linejoin="round"></line>
+                                <line data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="50.517"
+                                    y1="15" x2="57.445" y2="11" stroke-linejoin="round"></line>
+                                <line data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="50.517"
+                                    y1="41" x2="57.445" y2="45" stroke-linejoin="round"></line>
+                                <path data-cap="butt" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" d="M22.368,43.065l5.25,11.764 c0.987,2.211-0.006,4.802-2.216,5.789l0,0c-2.211,0.987-4.802-0.006-5.789-2.216l-9.574-21.453"
+                                    stroke-linejoin="round" stroke-linecap="round"></path>
+                                <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M42,51L22,37H11 c-4.971,0-9-4.029-9-9v0c0-4.971,4.029-9,9-9h11L42,5V51z"
+                                    stroke-linejoin="round"></path>
+                                <line fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="14" y1="19" x2="14"
+                                    y2="37" stroke-linejoin="round"></line>
+                            </g>
+                        </svg>
+                        <span>Promote</span>
+                    </a>
+                </li>
+                <li class="action inactive">
+                    <a href="#">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" xml:space="preserve" width="64" height="64">
+                            <g class="nc-icon-wrapper" fill="#ffffff">
+                                <line data-cap="butt" data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="18.928"
+                                    y1="28.19" x2="45.007" y2="13.846" stroke-linejoin="miter" stroke-linecap="butt"></line>
+                                <line data-cap="butt" data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="18.928"
+                                    y1="35.81" x2="45.007" y2="50.154" stroke-linejoin="miter" stroke-linecap="butt"></line>
+                                <circle fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="12" cy="32" r="8"
+                                    stroke-linejoin="miter"></circle>
+                                <circle fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="52" cy="10" r="8"
+                                    stroke-linejoin="miter"></circle>
+                                <circle fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="52" cy="54" r="8"
+                                    stroke-linejoin="miter"></circle>
+                            </g>
+                        </svg>
+                        <span>Sharing</span>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="inspirations-menu">
+        <h3 class="inspirations-menu-opener">Need inspiration?</h3>
+        <ul class="nav nav-pills nav-justified inspiration-tabs">
+            <li class="active">
+                <a data-toggle="tab" href="#home">Trending</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#menu2" data-tab-id="latest-embeds">Latest Embeds</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#menu3">Latest Products</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#menu4">Best for Retention</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#menu5">Best for Traffic</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <h4>Trending</h4>
+                <p>Some content.</p>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <h4>Latest Embeds</h4>
+                <ul class="list list-inline"></ul>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+                <h4>Latest Products</h4>
+                <p>Some content in menu 3.</p>
+            </div>
+            <div id="menu4" class="tab-pane fade">
+                <h4>Best for Retention</h4>
+                <p>Some content in menu 4.</p>
+            </div>
+            <div id="menu5" class="tab-pane fade">
+                <h4>Best for Traffic</h4>
+                <p>Some content in menu 4.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.inspirations-menu-opener').on('click', function() {
+                $(".inspirations-menu").toggleClass('open');
+                $(".actions").toggleClass('open');
+            });
+
+            // $("#search-tool").click(function() { 	var selector = $(this).data("target"); 	$(selector).toggleClass('in'); });
+            $(".tool").click(function() {
+                var selector = $(this).data("target");
+                $(selector).toggleClass('in');
+            });
+
+            function toggleDropdown() {
+                $('.dropdown-content').toggleClass('show')
+            }
+        });
+
+    </script>
+</body>
+
+</html>

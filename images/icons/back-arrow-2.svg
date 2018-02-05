@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve"><g stroke-width="2" transform="translate(0, 0)"><path data-cap="butt" data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-miterlimit="10" d="M3.716,39.716
+	C11.214,32.217,21.395,28,32,28s20.786,4.217,28.284,11.716" stroke-linejoin="miter" stroke-linecap="butt"></path>
+<polyline fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="7.751,20.127 
+	3.716,39.716 23.304,43.751 " stroke-linejoin="miter"></polyline></g></svg>

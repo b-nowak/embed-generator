@@ -1,0 +1,11 @@
+<svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px"
+     height="48px" viewBox="0 0 48 48">
+    <g>
+        <line data-cap="butt" data-color="color-2" fill="none" stroke="#0f0f0f" stroke-width="2" stroke-miterlimit="10" x1="6" y1="34"
+              x2="14" y2="42"/>
+        <line data-cap="butt" data-color="color-2" fill="none" stroke="#0f0f0f" stroke-width="2" stroke-miterlimit="10" x1="39" y1="17"
+              x2="31" y2="9"/>
+        <polygon fill="none" stroke="#0f0f0f" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="14,42 4,44 6,34
+	37,3 45,11 "/>
+    </g>
+</svg>

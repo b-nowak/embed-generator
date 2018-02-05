@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Pixdor</title>
+
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+
+    <link href="../css/base.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="color-wrap">
+        <div class="gradient-wrap">
+        </div>
+    </div>
+
+    <header>
+        <h1 title="Pixdor">
+            <a href="/">
+                <img class="logo" src="../images/logo.png" alt="">
+            </a>
+        </h1>
+        <h2>Add Place Marker</h2>
+        <div class="burger">
+            <div class="dropdown dropbtn dropdown-show" onclick="toggleDropdown();">
+                <a class="dropbtnclean main-menu-button">
+                    <img src='../images/icons/menu-34-2.svg'>
+                </a>
+                <!--<div id="myDropdown" class="dropdown-content">
+    <a href="/logout">Logout <i class="fa fa-sign-out"></i></a>
+</div>-->
+            </div>
+        </div>
+    </header>
+    <div class="success-page-wrap inner-content-padding">
+        <div class="main-toolbar-bg"></div>
+
+        <div class="main-toolbar" data-type="config-menu">
+            <ul class="main-toolbar-ul">
+                <li class="back-tool">
+                    <a type="button" id="back-tool" class="tool">
+                        <img src='../images/icons/undo-25.svg'>
+                        <span>Back</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- / end of main toolbar -->
+        <!-- todo -->
+        <div class="col-md-12 col-xs-12">
+            <h2>
+                Success! Here's your embed code.
+            </h2>
+        </div>
+        <div class="col-md-12 col-xs-12">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <div class="script-wrap">
+                        <h3>
+                            Copy&Paste HTML code below into your project.
+                        </h3>
+                        <div class="script">
+                            <div class="row">
+                                <div class="col-md-9 col-xs-12">
+                                    <div class="code">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-xs-12 btn-copy-wrap">
+                                    <a href="#" class="btn btn-default">Lorem</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-9 col-xs-12">
+                            <h4>
+                                or
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="script-wrap small">
+                        <h3>
+                            oEmbed supported websites.
+                        </h3>
+                        <div class="script">
+                            <div class="row">
+                                <div class="col-md-9 col-xs-12">
+                                    <div class="code"> https://store.pixdor.com/placemarker/56/show
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-xs-12 btn-copy-wrap">
+                                    <a href="#" class="btn btn-default">Lorem</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="script-wrap small">
+                        <h3>
+                            iFrame - if your mobile app or CMS doesn’t like the codes above, try this code. Note: if you change widget size, you must re-embed with this code.
+                        </h3>
+                        <div class="script">
+                            <div class="row">
+                                <div class="col-md-9 col-xs-12">
+                                    <div class="code"> https://store.pixdor.com/placemarker/56/show
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-xs-12 btn-copy-wrap">
+                                    <a href="#" class="btn btn-default">Lorem</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="grid-item">
+                        <div class="embed-container">
+                            <div class="embed-snapshot">
+                                <img src="http://placehold.it/1920x1080" alt="Avatar" class="embed-item">
+                                <div class="overlay">
+                                    <div class="information">
+                                        <h4>Created: 04/08/17</h4>
+                                        <span>User: PIXDOR</span>
+                                    </div>
+                                    <div class="buttons">
+                                        <a href="#" class="btn-transparent">View</a>
+                                        <a href="#" class="btn-transparent embed">Embed</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="embed-caption">
+                                <h3>
+                                    <a href="#">My theme or something</a>
+                                </h3>
+                                <span><strong>500x500</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/jquery.wheelcolorpicker-3.0.2.min.js"></script>
+    <script src="../js/masonry.pkgd.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+        });
+
+    </script>
+</body>
+
+</html>

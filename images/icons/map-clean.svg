@@ -1,0 +1,10 @@
+<svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+    <g>
+        <line data-cap="butt" data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="18" y1="4"
+              x2="18" y2="40"></line>
+        <line data-cap="butt" data-color="color-2" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="30" y1="8"
+              x2="30" y2="44"></line>
+        <polygon fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="2,8 18,4 30,8
+	46,4 46,40 30,44 18,40 2,44 "></polygon>
+    </g>
+</svg>

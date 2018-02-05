@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Pixdor</title>
+
+
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/animate.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+
+    <link href="../../css/base.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="color-wrap">
+        <div class="gradient-wrap">
+        </div>
+    </div>
+    <header>
+        <h1 title="Pixdor">
+            <a href="/">
+                <img class="logo" src="../../images/logo.png" alt="">
+            </a>
+        </h1>
+        <h2>Add Place Marker</h2>
+        <div class="burger">
+            <div class="dropdown dropbtn dropdown-show" onclick="toggleDropdown();">
+                <a class="dropbtnclean main-menu-button">
+                    <img src='../../images/icons/menu-34-2.svg'>
+                </a>
+                <!--<div id="myDropdown" class="dropdown-content">
+    <a href="/logout">Logout <i class="fa fa-sign-out"></i></a>
+</div>-->
+            </div>
+        </div>
+    </header>
+    <div class="place-builder-wrap inner-content-padding">
+
+        <div class="main-toolbar-bg"></div>
+
+
+        <div class="bottom-navigation-tabs">
+            <ul class="nav nav-pills nav-justified bottom-tab-list">
+                <li id="design-tab" class="active">
+                    <a data-toggle="tab" href="#place-category" id="save-tab-btn"><img src='../../images/icons/dots.svg'>
+                        <span>Category</span></a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#description"> <img src='../../images/icons/edit-74.svg'>
+                        <span class="preview-caption">Description</span></a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#contact"><img src='../../images/icons/phone-2.svg'>
+                        <span>Contact</span></a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#reservation"><img src='../../images/icons/preferences-rotate-2.svg'>
+                        <span>Reservation</span></a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#previev-save"><img src='../../images/icons/check-curve.svg'>
+                        <span>Preview&Save</span></a>
+                </li>
+
+            </ul>
+            <div class="tab-content">
+                <div id="place-category" class="tab-pane fade in active">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <a class="btnNext"></a>
+                </div>
+                <!-- end of design tab -->
+                <div id="description" class="tab-pane fade">
+                    Reiciendis velit suscipit perferendis, distinctio sunt.
+                    <a class="btnNext"></a>
+                    <a class="btnPrevious"></a>
+                </div>
+
+                <div id="contact" class="tab-pane fade">
+                    Adipisci animi amet repellat quis incidunt temporibus.
+                    <a class="btnNext"></a>
+                    <a class="btnPrevious"></a>
+                </div>
+                <div id="reservation" class="tab-pane fade">
+                    Quisquam natus dolorum alias delectus maxime minus.
+                    <a class="btnNext"></a>
+                    <a class="btnPrevious"></a>
+                </div>
+                <div id="previev-save" class="tab-pane fade">
+                    Rerum voluptatum.
+                    <a class="btnPrevious"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="../../js/jquery.wheelcolorpicker-3.0.2.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $('.btnNext').click(function() {
+                $('.bottom-tab-list > .active').next('li').find('a').trigger('click');
+            });
+
+            $('.btnPrevious').click(function() {
+                $('.bottom-tab-list > .active').prev('li').find('a').trigger('click');
+            });
+        });
+
+    </script>
+</body>
+
+</html>
